@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMT Trading Viber Channel</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 40px 20px; background: #f8f9fa; color: #222; }
+    .card { max-width: 400px; margin: auto; background: #fff; padding: 28px 20px; border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .btn { display: inline-block; margin-top: 18px; padding: 14px 28px; background: #7360f2; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; }
+    .note { margin-top: 18px; font-size: 13px; color: #555; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>UMT Trading Viber Channel</h2>
+    <p>ပစ္စည်းများ နေ့စဉ်ဈေးနှုန်းများနှင့် ပရိုမိုးရှင်းများ ကြည့်ရန် Channel ကို Join ပါ</p>
+    <a id="viberBtn" class="btn" href="https://invite.viber.com/?g2=AQAkPLkk6%2B77hFJWgMu8JfrexCSjhUaRo1uH6c1pHmbR04M02suYY4rnc1N2y8tK&lang=en">Viber ဖြင့် ဖွင့်ရန်</a>
+    <div class="note">
+      နှိပ်မရပါက ညာဘက်အပေါ်ထောင့် <b>(•••)</b> ကိုနှိပ်ပြီး <b>Open in Browser</b> ကို ရွေးပေးပါ။
+    </div>
+  </div>
+  <script>
+    const viberUrl = "https://invite.viber.com/?g2=AQAkPLkk6%2B77hFJWgMu8JfrexCSjhUaRo1uH6c1pHmbR04M02suYY4rnc1N2y8tK&lang=en";
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    if (isAndroid) {
+      const cleanUrl = viberUrl.replace(/^https?:\/\//, "");
+      window.location.href = "intent://" + cleanUrl + "#Intent;scheme=https;package=com.viber.voip;end";
+    } else {
+      window.location.href = viberUrl;
+    }
+  </script>
+</body>
+</html>
